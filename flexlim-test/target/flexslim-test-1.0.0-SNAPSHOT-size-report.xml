@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <swf size="1514992" compressedSize="640501">
+
+    <!-- Header data (SWF attributes, product info, markers, etc.) -->
+    <headerData totalSize="397">
+      <data type="metaData" size="329"/>
+      <data type="productInfo" size="28"/>
+      <data type="swfHeader" size="21"/>
+      <data type="fileAttributes" size="6"/>
+      <data type="scriptLimits" size="6"/>
+      <data type="backgroundColor" size="5"/>
+      <data type="endMarker" size="2"/>
+    </headerData>
+
+    <!-- Cumulative frame size summary. -->
+    <frames totalSize="1514595">
+      <frame name="_flexslim_test_mx_managers_SystemManager" size="98121" frame="1"/>
+      <frame name="flexslim_test" size="1416474" frame="2"/>
+    </frames>
+
+    <!-- Actionscript code and constant data. -->
+    <actionScript totalSize="1486978">
+      <abc name="frame2" size="1388949" frame="2"/>
+      <abc name="frame1" size="98029" frame="1"/>
+    </actionScript>
+
+    <!-- defineSprite. -->
+    <sprites totalSize="162">
+      <sprite name="_flexslim_test_Styles__embed_css_Assets_swf_mx_skins_cursor_DragReject_1532575886" size="40" frame="2"/>
+      <sprite name="_flexslim_test_Styles__embed_css_Assets_swf_mx_skins_cursor_DragLink_200282917" size="31" frame="2"/>
+      <sprite name="_flexslim_test_Styles__embed_css_Assets_swf_mx_skins_cursor_DragCopy_201069484" size="31" frame="2"/>
+      <sprite name="_flexslim_test_Styles__embed_css_Assets_swf_mx_skins_cursor_DragMove_200314640" size="22" frame="2"/>
+      <sprite size="19" frame="2"/>
+      <sprite name="_flexslim_test_Styles__embed_css_Assets_swf_mx_skins_cursor_BusyCursor_519510854" size="19" frame="2"/>
+    </sprites>
+
+    <!-- defineShape/2/3/4. -->
+    <shapes totalSize="964">
+      <shape size="261" frame="2"/>
+      <shape size="177" frame="2"/>
+      <shape size="172" frame="2"/>
+      <shape size="165" frame="2"/>
+      <shape size="136" frame="2"/>
+      <shape size="53" frame="2"/>
+    </shapes>
+
+    <!-- defineBits, definebitsJPEG2/3/4, or defineBitsLossless/2 -->
+    <bitmaps totalSize="4970">
+      <bitmap name="spark.skins.spark.windowChrome.MacCloseButtonSkin__embed_mxml________________assets_mac_close_down_png_61762235" size="167" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_mac_close_down_png_1703877206" size="167" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.MacMaximizeButtonSkin__embed_mxml________________assets_mac_max_down_png_354214621" size="165" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_mac_max_down_png_2060917046" size="165" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.MacCloseButtonSkin__embed_mxml________________assets_mac_close_over_png_78219559" size="159" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_mac_close_over_png_1183717814" size="159" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.MacCloseButtonSkin__embed_mxml________________assets_mac_close_up_png_1458772263" size="157" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.MacMaximizeButtonSkin__embed_mxml________________assets_mac_max_dis_png_1918157287" size="157" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_mac_close_up_png_114120776" size="157" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_mac_max_dis_png_781471058" size="157" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.MacMaximizeButtonSkin__embed_mxml________________assets_mac_max_up_png_105212633" size="154" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_mac_max_up_png_690485008" size="154" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.MacMinimizeButtonSkin__embed_mxml________________assets_mac_min_down_png_1819079257" size="152" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.MacMinimizeButtonSkin__embed_mxml________________assets_mac_min_dis_png_267232773" size="152" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.MacMaximizeButtonSkin__embed_mxml________________assets_mac_max_over_png_1746264793" size="152" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_mac_min_dis_png_705247826" size="152" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_mac_max_over_png_1879739306" size="152" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_mac_min_down_png_44665878" size="152" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.MacMinimizeButtonSkin__embed_mxml________________assets_mac_min_up_png_2031785531" size="149" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_mac_min_up_png_763264372" size="149" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.MacMinimizeButtonSkin__embed_mxml________________assets_mac_min_over_png_655627989" size="146" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_mac_min_over_png_1278563018" size="146" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.CloseButtonSkin__embed_mxml________________assets_win_close_over_png_590242983" size="73" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.CloseButtonSkin__embed_mxml________________assets_win_close_up_png_387707869" size="73" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.CloseButtonSkin__embed_mxml________________assets_win_close_down_png_1152223907" size="73" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_win_close_down_png_105175740" size="73" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_win_close_up_png_1867896854" size="73" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_win_close_over_png_1508961712" size="73" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.RestoreButtonSkin__embed_mxml________________assets_win_restore_down_png_1574970585" size="59" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.RestoreButtonSkin__embed_mxml________________assets_win_restore_up_png_614570535" size="59" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.RestoreButtonSkin__embed_mxml________________assets_win_restore_over_png_1105208677" size="59" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_win_restore_over_png_1676599284" size="59" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_win_restore_up_png_982474422" size="59" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_win_restore_down_png_1535229776" size="59" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_gripper_up_png_517635914" size="52" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.MaximizeButtonSkin__embed_mxml________________assets_win_max_over_png_1763450457" size="49" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.MaximizeButtonSkin__embed_mxml________________assets_win_max_up_png_1764922939" size="49" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.MaximizeButtonSkin__embed_mxml________________assets_win_max_down_png_1812856277" size="49" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_win_max_over_png_431580344" size="49" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_win_max_down_png_1967815524" size="49" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_win_max_up_png_523783530" size="49" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.MaximizeButtonSkin__embed_mxml________________assets_win_max_dis_png_266647045" size="46" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_win_max_dis_png_706141072" size="46" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.MinimizeButtonSkin__embed_mxml________________assets_win_min_down_png_874243673" size="41" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.MinimizeButtonSkin__embed_mxml________________assets_win_min_over_png_1458575907" size="41" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.MinimizeButtonSkin__embed_mxml________________assets_win_min_up_png_1898092967" size="41" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_win_min_up_png_1209376458" size="41" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_win_min_down_png_1724758216" size="41" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_win_min_over_png_20322476" size="41" frame="2"/>
+      <bitmap name="spark.skins.spark.windowChrome.MinimizeButtonSkin__embed_mxml________________assets_win_min_dis_png_1918561767" size="37" frame="2"/>
+      <bitmap name="_flexslim_test_Styles__embed_css_win_min_dis_png_367783308" size="37" frame="2"/>
+    </bitmaps>
+
+    <!-- SWF, Pixel Bender, or other miscellaneous embed data. -->
+    <binaryData totalSize="12506">
+      <data name="mx.graphics.shaderClasses.SaturationShader_ShaderClass" size="2298" frame="2"/>
+      <data name="mx.graphics.shaderClasses.HueShader_ShaderClass" size="2268" frame="2"/>
+      <data name="mx.graphics.shaderClasses.SoftLightShader_ShaderClass" size="1920" frame="2"/>
+      <data name="mx.graphics.shaderClasses.LuminosityShader_ShaderClass" size="1282" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ColorShader_ShaderClass" size="1272" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ColorBurnShader_ShaderClass" size="1144" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ColorDodgeShader_ShaderClass" size="1074" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ExclusionShader_ShaderClass" size="624" frame="2"/>
+      <data name="mx.graphics.shaderClasses.LuminosityMaskShader_ShaderClass" size="624" frame="2"/>
+    </binaryData>
+
+    <!-- Additional frame tags (symbolClass, exportAssets, showFrame, etc). -->
+    <frameData totalSize="9015">
+      <tag type="symbolClass" size="5401" frame="2"/>
+      <tag type="exportAssets" size="3504" frame="2"/>
+      <tag type="symbolClass" size="47" frame="1"/>
+      <tag type="frameLabel" size="43" frame="1"/>
+      <tag type="frameLabel" size="16" frame="2"/>
+      <tag type="showFrame" size="2" frame="1"/>
+      <tag type="showFrame" size="2" frame="2"/>
+    </frameData>
+  </swf>
+</report>

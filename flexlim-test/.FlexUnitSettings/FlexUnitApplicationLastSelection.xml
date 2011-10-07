@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="" >
+<testsuite  name="Default Test Suite" project="flexslim-test">
+<testsuite name="mhwa.core.widget:ProgramScheduleSettingsTest" type="testcaseclass"/>
+<testsuite name="mhwa.core.widget:ProgresBarValidatorTest" type="testcaseclass"/>
+</testsuite>
+</testrun>
