@@ -1,0 +1,1 @@
+<testsuite errors='0' failures='0' name='fitnesse.slim.service.SlimSocketServerFactoryTest' tests='1' time='0' ><testcase name="getServerWillCreateSlimSocketServer" time="0"/></testsuite>

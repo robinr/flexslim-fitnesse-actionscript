@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="fitnesse.slim.statement.StatementExecutorTest"/>
+    <classEntry path="fitnesse.slim.statement.ClassInNonDefaultPackage"/>
+    <classEntry path="fitnesse.slim.statement.ClassInNonDefaultPackage1"/>
+    <classEntry path="fitnesse.slim.service.SlimFormat"/>
+    <classEntry path="fitnesse.slim.statement.ClassInNonDefaultPackage2"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

@@ -1,0 +1,361 @@
+<asdoc>
+
+<classRec name='StatementExecutor' fullname='fitnesse.slim.statement:StatementExecutor' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\statement\StatementExecutor.as' namespace='fitnesse.slim.statement' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='StatementExecutor' fullname='fitnesse.slim.statement:StatementExecutor/StatementExecutor' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='addPath' fullname='fitnesse.slim.statement:StatementExecutor/addPath' isStatic='false' isFinal='false' isOverride='false'  param_names='pathToAdd' param_types='String' param_defaults='undefined' result_type='Object'>
+</method>
+<method name='callAndAssign' fullname='fitnesse.slim.statement:StatementExecutor/callAndAssign' isStatic='false' isFinal='false' isOverride='false'  param_names='target;instance;methodName;args' param_types='String;String;String;Array' param_defaults='undefined;undefined;undefined;undefined' result_type='Object'>
+</method>
+<method name='call' fullname='fitnesse.slim.statement:StatementExecutor/call' isStatic='false' isFinal='false' isOverride='false'  param_names='instance;methodName;args' param_types='String;String;Array' param_defaults='undefined;undefined;undefined' result_type='Object'>
+</method>
+<method name='create' fullname='fitnesse.slim.statement:StatementExecutor/create' isStatic='false' isFinal='false' isOverride='false'  param_names='instance;className;args' param_types='String;String;Array' param_defaults='undefined;undefined;undefined' result_type='Object'>
+</method>
+<method name='path' fullname='fitnesse.slim.statement:StatementExecutor/path/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<field name='path_' fullname='fitnesse.slim.statement:StatementExecutor/private:path_' type='Array' isStatic='false' isConst='false' >
+</field>
+<interfaceRec name='IStatement' fullname='fitnesse.slim.statement:IStatement' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\statement\IStatement.as' namespace='fitnesse.slim.statement' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='execute' fullname='fitnesse.slim.statement:IStatement/fitnesse.slim.statement:IStatement:execute' isStatic='false' isFinal='false' isOverride='false'  param_names='executor' param_types='fitnesse.slim.statement:StatementExecutor' param_defaults='undefined' result_type='Object'>
+</method>
+<classRec name='StatementFactory' fullname='fitnesse.slim.statement:StatementFactory' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\statement\StatementFactory.as' namespace='fitnesse.slim.statement' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='StatementFactory' fullname='fitnesse.slim.statement:StatementFactory/StatementFactory' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='getCallAndAssignStatement' fullname='fitnesse.slim.statement:StatementFactory/private:getCallAndAssignStatement' isStatic='false' isFinal='false' isOverride='false'  param_names='args' param_types='Array' param_defaults='undefined' result_type='fitnesse.slim.statement:IStatement'>
+</method>
+<method name='getCallStatement' fullname='fitnesse.slim.statement:StatementFactory/private:getCallStatement' isStatic='false' isFinal='false' isOverride='false'  param_names='args' param_types='Array' param_defaults='undefined' result_type='fitnesse.slim.statement:IStatement'>
+</method>
+<method name='getImportStatement' fullname='fitnesse.slim.statement:StatementFactory/private:getImportStatement' isStatic='false' isFinal='false' isOverride='false'  param_names='args' param_types='Array' param_defaults='undefined' result_type='fitnesse.slim.statement:IStatement'>
+</method>
+<method name='getInvalidStatement' fullname='fitnesse.slim.statement:StatementFactory/private:getInvalidStatement' isStatic='false' isFinal='false' isOverride='false'  param_names='instruction' param_types='String' param_defaults='undefined' result_type='fitnesse.slim.statement:IStatement'>
+</method>
+<method name='getMakeStatement' fullname='fitnesse.slim.statement:StatementFactory/private:getMakeStatement' isStatic='false' isFinal='false' isOverride='false'  param_names='args' param_types='Array' param_defaults='undefined' result_type='fitnesse.slim.statement:IStatement'>
+</method>
+<method name='getStatement' fullname='fitnesse.slim.statement:StatementFactory/getStatement' isStatic='false' isFinal='false' isOverride='false'  param_names='args' param_types='Array' param_defaults='undefined' result_type='fitnesse.slim.statement:IStatement'>
+</method>
+<field name='statements' fullname='fitnesse.slim.statement:StatementFactory/private:statements' type='Array' isStatic='false' isConst='false' >
+</field>
+<classRec name='CallStatement' fullname='fitnesse.slim.statement:CallStatement' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\statement\CallStatement.as' namespace='fitnesse.slim.statement' access='public' baseclass='Object' interfaces='fitnesse.slim.statement:IStatement' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='CallStatement' fullname='fitnesse.slim.statement:CallStatement/CallStatement' isStatic='false' isFinal='false' isOverride='false'  param_names='instance;method;args' param_types='String;String;Array' param_defaults='undefined;undefined;undefined' result_type='*'>
+</method>
+<method name='execute' fullname='fitnesse.slim.statement:CallStatement/execute' isStatic='false' isFinal='false' isOverride='false'  param_names='executor' param_types='fitnesse.slim.statement:StatementExecutor' param_defaults='undefined' result_type='Object'>
+</method>
+<field name='args_' fullname='fitnesse.slim.statement:CallStatement/private:args_' type='Array' isStatic='false' isConst='false' >
+</field>
+<field name='instance_' fullname='fitnesse.slim.statement:CallStatement/private:instance_' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='method_' fullname='fitnesse.slim.statement:CallStatement/private:method_' type='String' isStatic='false' isConst='false' >
+</field>
+<classRec name='CallAndAssignStatement' fullname='fitnesse.slim.statement:CallAndAssignStatement' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\statement\CallAndAssignStatement.as' namespace='fitnesse.slim.statement' access='public' baseclass='Object' interfaces='fitnesse.slim.statement:IStatement' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='CallAndAssignStatement' fullname='fitnesse.slim.statement:CallAndAssignStatement/CallAndAssignStatement' isStatic='false' isFinal='false' isOverride='false'  param_names='target;instance;method;args' param_types='String;String;String;Array' param_defaults='undefined;undefined;undefined;undefined' result_type='*'>
+</method>
+<method name='execute' fullname='fitnesse.slim.statement:CallAndAssignStatement/execute' isStatic='false' isFinal='false' isOverride='false'  param_names='executor' param_types='fitnesse.slim.statement:StatementExecutor' param_defaults='undefined' result_type='Object'>
+</method>
+<field name='args_' fullname='fitnesse.slim.statement:CallAndAssignStatement/private:args_' type='Array' isStatic='false' isConst='false' >
+</field>
+<field name='instance_' fullname='fitnesse.slim.statement:CallAndAssignStatement/private:instance_' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='method_' fullname='fitnesse.slim.statement:CallAndAssignStatement/private:method_' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='target_' fullname='fitnesse.slim.statement:CallAndAssignStatement/private:target_' type='String' isStatic='false' isConst='false' >
+</field>
+<classRec name='ImportStatement' fullname='fitnesse.slim.statement:ImportStatement' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\statement\ImportStatement.as' namespace='fitnesse.slim.statement' access='public' baseclass='Object' interfaces='fitnesse.slim.statement:IStatement' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ImportStatement' fullname='fitnesse.slim.statement:ImportStatement/ImportStatement' isStatic='false' isFinal='false' isOverride='false'  param_names='path' param_types='String' param_defaults='undefined' result_type='*'>
+</method>
+<method name='execute' fullname='fitnesse.slim.statement:ImportStatement/execute' isStatic='false' isFinal='false' isOverride='false'  param_names='executor' param_types='fitnesse.slim.statement:StatementExecutor' param_defaults='undefined' result_type='Object'>
+</method>
+<field name='path_' fullname='fitnesse.slim.statement:ImportStatement/private:path_' type='String' isStatic='false' isConst='false' >
+</field>
+<classRec name='MakeStatement' fullname='fitnesse.slim.statement:MakeStatement' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\statement\MakeStatement.as' namespace='fitnesse.slim.statement' access='public' baseclass='Object' interfaces='fitnesse.slim.statement:IStatement' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='MakeStatement' fullname='fitnesse.slim.statement:MakeStatement/MakeStatement' isStatic='false' isFinal='false' isOverride='false'  param_names='instance;className;args' param_types='String;String;Array' param_defaults='undefined;undefined;undefined' result_type='*'>
+</method>
+<method name='execute' fullname='fitnesse.slim.statement:MakeStatement/execute' isStatic='false' isFinal='false' isOverride='false'  param_names='executor' param_types='fitnesse.slim.statement:StatementExecutor' param_defaults='undefined' result_type='Object'>
+</method>
+<field name='args_' fullname='fitnesse.slim.statement:MakeStatement/private:args_' type='Array' isStatic='false' isConst='false' >
+</field>
+<field name='className_' fullname='fitnesse.slim.statement:MakeStatement/private:className_' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='instance_' fullname='fitnesse.slim.statement:MakeStatement/private:instance_' type='String' isStatic='false' isConst='false' >
+</field>
+<classRec name='SlimError' fullname='fitnesse.slim.statement:SlimError' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\statement\SlimError.as' namespace='fitnesse.slim.statement' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='SlimError' fullname='fitnesse.slim.statement:SlimError/SlimError' isStatic='false' isFinal='false' isOverride='false'  param_names='message' param_types='String' param_defaults='undefined' result_type='*'>
+</method>
+<method name='toString' fullname='fitnesse.slim.statement:SlimError/toString' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<field name='message_' fullname='fitnesse.slim.statement:SlimError/private:message_' type='String' isStatic='false' isConst='false' >
+</field>
+<classRec name='InvalidStatement' fullname='fitnesse.slim.statement:InvalidStatement' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\statement\InvalidStatement.as' namespace='fitnesse.slim.statement' access='public' baseclass='Object' interfaces='fitnesse.slim.statement:IStatement' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='InvalidStatement' fullname='fitnesse.slim.statement:InvalidStatement/InvalidStatement' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='*'>
+</method>
+<method name='execute' fullname='fitnesse.slim.statement:InvalidStatement/execute' isStatic='false' isFinal='false' isOverride='false'  param_names='executor' param_types='fitnesse.slim.statement:StatementExecutor' param_defaults='undefined' result_type='Object'>
+</method>
+<field name='name_' fullname='fitnesse.slim.statement:InvalidStatement/private:name_' type='String' isStatic='false' isConst='false' >
+</field>
+<classRec name='OptionTokenizer' fullname='util:OptionTokenizer' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\util\OptionTokenizer.as' namespace='util' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='addReminder' fullname='util:OptionTokenizer/private:addReminder' isStatic='true' isFinal='false' isOverride='false'  param_names='tokens;reminder' param_types='Array;String' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='addToken' fullname='util:OptionTokenizer/private:addToken' isStatic='true' isFinal='false' isOverride='false'  param_names='tokens;matcher' param_types='Array;Array' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='getTokens' fullname='util:OptionTokenizer/getTokens' isStatic='true' isFinal='false' isOverride='false'  param_names='input' param_types='String' param_defaults='undefined' result_type='Array'>
+</method>
+<classRec name='OptionToken' fullname='util:OptionToken' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\util\OptionToken.as' namespace='util' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='OptionToken' fullname='util:OptionToken/OptionToken' isStatic='false' isFinal='false' isOverride='false'  param_names='name;args' param_types='String;String' param_defaults='undefined;undefined' result_type='*'>
+</method>
+<method name='toString' fullname='util:OptionToken/toString' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<method name='args' fullname='util:OptionToken/args/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='name' fullname='util:OptionToken/name/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+</method>
+<field name='args_' fullname='util:OptionToken/private:args_' type='Array' isStatic='false' isConst='false' >
+</field>
+<field name='name_' fullname='util:OptionToken/private:name_' type='String' isStatic='false' isConst='false' >
+</field>
+<classRec name='StringTokenizer' fullname='util:StringTokenizer' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\util\StringTokenizer.as' namespace='util' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='getTokens' fullname='util:StringTokenizer/getTokens' isStatic='true' isFinal='false' isOverride='false'  param_names='input;delimeter' param_types='String;String' param_defaults='undefined; ' result_type='Array'>
+</method>
+<classRec name='CommandLineError' fullname='util:CommandLineError' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\util\CommandLineError.as' namespace='util' access='public' baseclass='Error' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='CommandLineError' fullname='util:CommandLineError/CommandLineError' isStatic='false' isFinal='false' isOverride='false'  param_names='message' param_types='String' param_defaults='undefined' result_type='*'>
+</method>
+<classRec name='UnexpectedCommandLineArgumentError' fullname='util:UnexpectedCommandLineArgumentError' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\util\UnexpectedCommandLineArgumentError.as' namespace='util' access='public' baseclass='util:CommandLineError' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='UnexpectedCommandLineArgumentError' fullname='util:UnexpectedCommandLineArgumentError/UnexpectedCommandLineArgumentError' isStatic='false' isFinal='false' isOverride='false'  param_names='args' param_types='Array' param_defaults='undefined' result_type='*'>
+</method>
+<method name='sprintf' fullname='util:sprintf' isStatic='false' isFinal='false' isOverride='false'  param_names='format;args' param_types='String;restParam' param_defaults='undefined;undefined' result_type='String'>
+</method>
+<classRec name='CommandLineOption' fullname='util:CommandLineOption' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\util\CommandLineOption.as' namespace='util' access='public' baseclass='Object' isFinal='false' isDynamic='true' >
+</classRec>
+<method name='CommandLineOption' fullname='util:CommandLineOption/CommandLineOption' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='hasOption' fullname='util:CommandLineOption/protected:hasOption' isStatic='true' isFinal='false' isOverride='false'  param_names='values' param_types='Array' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='makeOption' fullname='util:CommandLineOption/makeOption' isStatic='true' isFinal='false' isOverride='false'  param_names='schema;optName;values' param_types='Array;String;Array' param_defaults='undefined;undefined;undefined' result_type='util:CommandLineOption'>
+</method>
+<method name='setValue' fullname='util:CommandLineOption/protected:setValue' isStatic='false' isFinal='false' isOverride='false'  param_names='argName;values' param_types='String;Array' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='setValues' fullname='util:CommandLineOption/protected:setValues' isStatic='false' isFinal='false' isOverride='false'  param_names='schema;optName;values' param_types='Array;String;Array' param_defaults='undefined;undefined;undefined' result_type='void'>
+</method>
+<method name='unexpectedEndOfLine' fullname='util:CommandLineOption/protected:unexpectedEndOfLine' isStatic='false' isFinal='false' isOverride='false'  param_names='argName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='unexpectedOption' fullname='util:CommandLineOption/protected:unexpectedOption' isStatic='false' isFinal='false' isOverride='false'  param_names='argName;values' param_types='String;Array' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<field name='name_' fullname='util:CommandLineOption/private:name_' type='String' isStatic='false' isConst='false' defaultValue='' >
+</field>
+<classRec name='MissingCommandLineOptionArgumentError' fullname='util:MissingCommandLineOptionArgumentError' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\util\MissingCommandLineOptionArgumentError.as' namespace='util' access='public' baseclass='util:CommandLineError' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='MissingCommandLineOptionArgumentError' fullname='util:MissingCommandLineOptionArgumentError/MissingCommandLineOptionArgumentError' isStatic='false' isFinal='false' isOverride='false'  param_names='optName;argName' param_types='String;String' param_defaults='undefined;undefined' result_type='*'>
+</method>
+<classRec name='UndefinedCommandLineOptionSuppliedError' fullname='util:UndefinedCommandLineOptionSuppliedError' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\util\UndefinedCommandLineOptionSuppliedError.as' namespace='util' access='public' baseclass='util:CommandLineError' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='UndefinedCommandLineOptionSuppliedError' fullname='util:UndefinedCommandLineOptionSuppliedError/UndefinedCommandLineOptionSuppliedError' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='*'>
+</method>
+<classRec name='MissingCommandLineArgumentError' fullname='util:MissingCommandLineArgumentError' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\util\MissingCommandLineArgumentError.as' namespace='util' access='public' baseclass='util:CommandLineError' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='MissingCommandLineArgumentError' fullname='util:MissingCommandLineArgumentError/MissingCommandLineArgumentError' isStatic='false' isFinal='false' isOverride='false'  param_names='argName' param_types='String' param_defaults='undefined' result_type='*'>
+</method>
+<classRec name='CommandLine' fullname='util:CommandLine' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\util\CommandLine.as' namespace='util' access='public' baseclass='util:CommandLineOption' isFinal='false' isDynamic='true' >
+</classRec>
+<method name='isDefined' fullname='util:CommandLine/isDefined' isStatic='false' isFinal='false' isOverride='false'  param_names='name' param_types='String' param_defaults='undefined' result_type='Boolean'>
+</method>
+<method name='makeCommandLine' fullname='util:CommandLine/makeCommandLine' isStatic='true' isFinal='false' isOverride='false'  param_names='descriptor;values' param_types='String;Array' param_defaults='undefined;undefined' result_type='util:CommandLine'>
+</method>
+<method name='makeSchema' fullname='util:CommandLine/private:makeSchema' isStatic='true' isFinal='false' isOverride='false'  param_names='descriptor' param_types='String' param_defaults='undefined' result_type='Array'>
+</method>
+<method name='setOption' fullname='util:CommandLine/private:setOption' isStatic='false' isFinal='false' isOverride='false'  param_names='schema;optName;values' param_types='Array;String;Array' param_defaults='undefined;undefined;undefined' result_type='void'>
+</method>
+<method name='setOptions' fullname='util:CommandLine/private:setOptions' isStatic='false' isFinal='false' isOverride='false'  param_names='schema;values' param_types='Array;Array' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='unexpectedEndOfLine' fullname='util:CommandLine/protected:unexpectedEndOfLine' isStatic='false' isFinal='false' isOverride='true'  param_names='argName' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<classRec name='SlimVersion' fullname='fitnesse.slim:SlimVersion' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\SlimVersion.as' namespace='fitnesse.slim' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<field name='VERSION' fullname='fitnesse.slim:SlimVersion/VERSION' type='String' isStatic='true' isConst='true' defaultValue='0.3' >
+</field>
+<interfaceRec name='IInstructionProcessor' fullname='fitnesse.slim.service:IInstructionProcessor' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\service\IInstructionProcessor.as' namespace='fitnesse.slim.service' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='processInstructions' fullname='fitnesse.slim.service:IInstructionProcessor/fitnesse.slim.service:IInstructionProcessor:processInstructions' isStatic='false' isFinal='false' isOverride='false'  param_names='input' param_types='String' param_defaults='undefined' result_type='String'>
+</method>
+<classRec name='ListExecutor' fullname='fitnesse.slim.service:ListExecutor' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\service\ListExecutor.as' namespace='fitnesse.slim.service' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ListExecutor' fullname='fitnesse.slim.service:ListExecutor/ListExecutor' isStatic='false' isFinal='false' isOverride='false'  param_names='factory;executor' param_types='fitnesse.slim.statement:StatementFactory;fitnesse.slim.statement:StatementExecutor' param_defaults='null;null' result_type='*'>
+</method>
+<method name='executeInstruction' fullname='fitnesse.slim.service:ListExecutor/private:executeInstruction' isStatic='false' isFinal='false' isOverride='false'  param_names='inst;results' param_types='Object;Array' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<method name='execute' fullname='fitnesse.slim.service:ListExecutor/execute' isStatic='false' isFinal='false' isOverride='false'  param_names='instructions' param_types='Array' param_defaults='undefined' result_type='Array'>
+</method>
+<field name='executor_' fullname='fitnesse.slim.service:ListExecutor/private:executor_' type='fitnesse.slim.statement:StatementExecutor' isStatic='false' isConst='false' >
+</field>
+<field name='factory_' fullname='fitnesse.slim.service:ListExecutor/private:factory_' type='fitnesse.slim.statement:StatementFactory' isStatic='false' isConst='false' >
+</field>
+<classRec name='SlimInstructionProcessor' fullname='fitnesse.slim.service:SlimInstructionProcessor' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\service\SlimInstructionProcessor.as' namespace='fitnesse.slim.service' access='public' baseclass='Object' interfaces='fitnesse.slim.service:IInstructionProcessor' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='SlimInstructionProcessor' fullname='fitnesse.slim.service:SlimInstructionProcessor/SlimInstructionProcessor' isStatic='false' isFinal='false' isOverride='false'  param_names='serializer;executor' param_types='fitnesse.slim.service:ListSerializer;fitnesse.slim.service:ListExecutor' param_defaults='undefined;undefined' result_type='*'>
+</method>
+<method name='processInstructions' fullname='fitnesse.slim.service:SlimInstructionProcessor/processInstructions' isStatic='false' isFinal='false' isOverride='false'  param_names='input' param_types='String' param_defaults='undefined' result_type='String'>
+</method>
+<method name='executor' fullname='fitnesse.slim.service:SlimInstructionProcessor/executor/get' isStatic='false' isFinal='false' isOverride='false'  result_type='fitnesse.slim.service:ListExecutor'>
+</method>
+<method name='serializer' fullname='fitnesse.slim.service:SlimInstructionProcessor/serializer/get' isStatic='false' isFinal='false' isOverride='false'  result_type='fitnesse.slim.service:ListSerializer'>
+</method>
+<field name='executor_' fullname='fitnesse.slim.service:SlimInstructionProcessor/private:executor_' type='fitnesse.slim.service:ListExecutor' isStatic='false' isConst='false' >
+</field>
+<field name='serializer_' fullname='fitnesse.slim.service:SlimInstructionProcessor/private:serializer_' type='fitnesse.slim.service:ListSerializer' isStatic='false' isConst='false' >
+</field>
+<classRec name='ListSerializer' fullname='fitnesse.slim.service:ListSerializer' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\service\ListSerializer.as' namespace='fitnesse.slim.service' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='checkInputString' fullname='fitnesse.slim.service:ListSerializer/private:checkInputString' isStatic='false' isFinal='false' isOverride='false'  param_names='input' param_types='String' param_defaults='undefined' result_type='void'>
+</method>
+<method name='deserializeItemString' fullname='fitnesse.slim.service:ListSerializer/private:deserializeItemString' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='String' param_defaults='undefined' result_type='Object'>
+</method>
+<method name='deserializeItem' fullname='fitnesse.slim.service:ListSerializer/private:deserializeItem' isStatic='false' isFinal='false' isOverride='false'  param_names='item;result' param_types='String;Array' param_defaults='undefined;undefined' result_type='String'>
+</method>
+<method name='deserializeList' fullname='fitnesse.slim.service:ListSerializer/private:deserializeList' isStatic='false' isFinal='false' isOverride='false'  param_names='itemCount;body' param_types='int;String' param_defaults='undefined;undefined' result_type='Array'>
+</method>
+<method name='deserializeString' fullname='fitnesse.slim.service:ListSerializer/private:deserializeString' isStatic='false' isFinal='false' isOverride='false'  param_names='input' param_types='String' param_defaults='undefined' result_type='Array'>
+</method>
+<method name='deserialize' fullname='fitnesse.slim.service:ListSerializer/deserialize' isStatic='false' isFinal='false' isOverride='false'  param_names='input' param_types='String' param_defaults='undefined' result_type='Array'>
+</method>
+<method name='serializeItem' fullname='fitnesse.slim.service:ListSerializer/private:serializeItem' isStatic='false' isFinal='false' isOverride='false'  param_names='item' param_types='Object' param_defaults='undefined' result_type='String'>
+</method>
+<method name='serializeItems' fullname='fitnesse.slim.service:ListSerializer/private:serializeItems' isStatic='false' isFinal='false' isOverride='false'  param_names='results' param_types='Array' param_defaults='undefined' result_type='String'>
+</method>
+<method name='serialize' fullname='fitnesse.slim.service:ListSerializer/serialize' isStatic='false' isFinal='false' isOverride='false'  param_names='results' param_types='Array' param_defaults='undefined' result_type='String'>
+</method>
+<field name='ITEM_FORMAT' fullname='fitnesse.slim.service:ListSerializer/private:ITEM_FORMAT' type='String' isStatic='true' isConst='true' defaultValue='%06d:%s:' >
+</field>
+<field name='ITEM_PATTERN' fullname='fitnesse.slim.service:ListSerializer/private:ITEM_PATTERN' type='RegExp' isStatic='true' isConst='true' defaultValue='unknown' >
+</field>
+<field name='LIST_FORMAT' fullname='fitnesse.slim.service:ListSerializer/private:LIST_FORMAT' type='String' isStatic='true' isConst='true' defaultValue='[%06d:%s]' >
+</field>
+<field name='LIST_PATTERN' fullname='fitnesse.slim.service:ListSerializer/private:LIST_PATTERN' type='RegExp' isStatic='true' isConst='true' defaultValue='unknown' >
+</field>
+<interfaceRec name='ISlimServiceContext' fullname='fitnesse.slim.service:ISlimServiceContext' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\service\ISlimServiceContext.as' namespace='fitnesse.slim.service' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='getExitFunction' fullname='fitnesse.slim.service:ISlimServiceContext/fitnesse.slim.service:ISlimServiceContext:getExitFunction' isStatic='false' isFinal='false' isOverride='false'  result_type='Function'>
+</method>
+<method name='getLoggingTarget' fullname='fitnesse.slim.service:ISlimServiceContext/fitnesse.slim.service:ISlimServiceContext:getLoggingTarget' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.logging:ILoggingTarget'>
+</method>
+<classRec name='SlimSocketServerFactory' fullname='fitnesse.slim.service:SlimSocketServerFactory' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\service\SlimSocketServerFactory.as' namespace='fitnesse.slim.service' access='public' baseclass='Object' interfaces='fitnesse.socketservice:ISocketServerFactory' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='SlimSocketServerFactory' fullname='fitnesse.slim.service:SlimSocketServerFactory/SlimSocketServerFactory' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='getSocketServer' fullname='fitnesse.slim.service:SlimSocketServerFactory/getSocketServer' isStatic='false' isFinal='false' isOverride='false'  param_names='parent;client;logger' param_types='flash.net:ServerSocket;flash.net:Socket;mx.logging:ILogger' param_defaults='undefined;undefined;undefined' result_type='fitnesse.socketservice:ISocketServer'>
+</method>
+<field name='executor' fullname='fitnesse.slim.service:SlimSocketServerFactory/private:executor' type='fitnesse.slim.service:ListExecutor' isStatic='false' isConst='true' defaultValue='unknown' >
+</field>
+<field name='sExecutor' fullname='fitnesse.slim.service:SlimSocketServerFactory/private:sExecutor' type='fitnesse.slim.statement:StatementExecutor' isStatic='false' isConst='true' defaultValue='unknown' >
+</field>
+<field name='sFactory' fullname='fitnesse.slim.service:SlimSocketServerFactory/private:sFactory' type='fitnesse.slim.statement:StatementFactory' isStatic='false' isConst='true' defaultValue='unknown' >
+</field>
+<field name='serializer' fullname='fitnesse.slim.service:SlimSocketServerFactory/private:serializer' type='fitnesse.slim.service:ListSerializer' isStatic='false' isConst='true' defaultValue='unknown' >
+</field>
+<classRec name='SlimSocketServer' fullname='fitnesse.slim.service:SlimSocketServer' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\service\SlimSocketServer.as' namespace='fitnesse.slim.service' access='public' baseclass='fitnesse.socketservice:AbstractSocketServer' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='SlimSocketServer' fullname='fitnesse.slim.service:SlimSocketServer/SlimSocketServer' isStatic='false' isFinal='false' isOverride='false'  param_names='parent;client;processor;logger' param_types='flash.net:ServerSocket;flash.net:Socket;fitnesse.slim.service:IInstructionProcessor;mx.logging:ILogger' param_defaults='undefined;undefined;undefined;undefined' result_type='*'>
+</method>
+<method name='getResults' fullname='fitnesse.slim.service:SlimSocketServer/private:getResults' isStatic='false' isFinal='false' isOverride='false'  param_names='instructions' param_types='String' param_defaults='undefined' result_type='String'>
+</method>
+<method name='readRequest' fullname='fitnesse.slim.service:SlimSocketServer/protected:readRequest' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+</method>
+<method name='parent' fullname='fitnesse.slim.service:SlimSocketServer/parent/get' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.net:ServerSocket'>
+</method>
+<method name='processor' fullname='fitnesse.slim.service:SlimSocketServer/processor/get' isStatic='false' isFinal='false' isOverride='false'  result_type='fitnesse.slim.service:IInstructionProcessor'>
+</method>
+<field name='parent_' fullname='fitnesse.slim.service:SlimSocketServer/private:parent_' type='flash.net:ServerSocket' isStatic='false' isConst='false' >
+</field>
+<field name='processor_' fullname='fitnesse.slim.service:SlimSocketServer/private:processor_' type='fitnesse.slim.service:IInstructionProcessor' isStatic='false' isConst='false' >
+</field>
+<classRec name='SlimSocketService' fullname='fitnesse.slim.service:SlimSocketService' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\service\SlimSocketService.as' namespace='fitnesse.slim.service' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='getService' fullname='fitnesse.slim.service:SlimSocketService/getService' isStatic='true' isFinal='false' isOverride='false'  param_names='args;context' param_types='Array;fitnesse.slim.service:ISlimServiceContext' param_defaults='undefined;undefined' result_type='fitnesse.socketservice:SocketService'>
+</method>
+<method name='main' fullname='fitnesse.slim.service:SlimSocketService/main' isStatic='true' isFinal='false' isOverride='false'  param_names='args' param_types='Array' param_defaults='undefined' result_type='void'>
+</method>
+<method name='setupLogger' fullname='fitnesse.slim.service:SlimSocketService/private:setupLogger' isStatic='true' isFinal='false' isOverride='false'  param_names='target;isVerbose' param_types='mx.logging:ILoggingTarget;Boolean' param_defaults='undefined;undefined' result_type='void'>
+</method>
+<classRec name='SlimServiceContext' fullname='fitnesse.slim.service:SlimServiceContext' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\slim\service\SlimServiceContext.as' namespace='fitnesse.slim.service' access='public' baseclass='Object' interfaces='fitnesse.slim.service:ISlimServiceContext' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='getExitFunction' fullname='fitnesse.slim.service:SlimServiceContext/getExitFunction' isStatic='false' isFinal='false' isOverride='false'  result_type='Function'>
+</method>
+<method name='getLoggingTarget' fullname='fitnesse.slim.service:SlimServiceContext/getLoggingTarget' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.logging:ILoggingTarget'>
+</method>
+<interfaceRec name='ISocketServer' fullname='fitnesse.socketservice:ISocketServer' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\socketservice\ISocketServer.as' namespace='fitnesse.socketservice' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='close' fullname='fitnesse.socketservice:ISocketServer/fitnesse.socketservice:ISocketServer:close' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<classRec name='SocketService' fullname='fitnesse.socketservice:SocketService' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\socketservice\SocketService.as' namespace='fitnesse.socketservice' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='SocketService' fullname='fitnesse.socketservice:SocketService/SocketService' isStatic='false' isFinal='false' isOverride='false'  param_names='port;factory;exitFunction;logger' param_types='int;fitnesse.socketservice:ISocketServerFactory;Function;mx.logging:ILogger' param_defaults='undefined;undefined;undefined;undefined' result_type='*'>
+</method>
+<method name='close' fullname='fitnesse.socketservice:SocketService/close' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='getSocketServer' fullname='fitnesse.socketservice:SocketService/protected:getSocketServer' isStatic='false' isFinal='false' isOverride='false'  param_names='client' param_types='flash.net:Socket' param_defaults='undefined' result_type='fitnesse.socketservice:ISocketServer'>
+</method>
+<method name='onClose' fullname='fitnesse.socketservice:SocketService/private:onClose' isStatic='false' isFinal='false' isOverride='false'  param_names='evt' param_types='flash.events:Event' param_defaults='undefined' result_type='void'>
+</method>
+<method name='onConnect' fullname='fitnesse.socketservice:SocketService/private:onConnect' isStatic='false' isFinal='false' isOverride='false'  param_names='evt' param_types='flash.events:ServerSocketConnectEvent' param_defaults='undefined' result_type='void'>
+</method>
+<method name='removeListeners' fullname='fitnesse.socketservice:SocketService/private:removeListeners' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='setListeners' fullname='fitnesse.socketservice:SocketService/private:setListeners' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='start' fullname='fitnesse.socketservice:SocketService/start' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='exitFunction' fullname='fitnesse.socketservice:SocketService/exitFunction/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Function'>
+</method>
+<method name='factory' fullname='fitnesse.socketservice:SocketService/factory/get' isStatic='false' isFinal='false' isOverride='false'  result_type='fitnesse.socketservice:ISocketServerFactory'>
+</method>
+<method name='logger' fullname='fitnesse.socketservice:SocketService/logger/get' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.logging:ILogger'>
+</method>
+<method name='socket' fullname='fitnesse.socketservice:SocketService/socket/get' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.net:ServerSocket'>
+</method>
+<field name='exitFunction_' fullname='fitnesse.socketservice:SocketService/private:exitFunction_' type='Function' isStatic='false' isConst='false' >
+</field>
+<field name='factory_' fullname='fitnesse.socketservice:SocketService/private:factory_' type='fitnesse.socketservice:ISocketServerFactory' isStatic='false' isConst='false' >
+</field>
+<field name='logger_' fullname='fitnesse.socketservice:SocketService/private:logger_' type='mx.logging:ILogger' isStatic='false' isConst='false' >
+</field>
+<field name='servers_' fullname='fitnesse.socketservice:SocketService/private:servers_' type='flash.utils:Dictionary' isStatic='false' isConst='false' >
+</field>
+<field name='socket_' fullname='fitnesse.socketservice:SocketService/private:socket_' type='flash.net:ServerSocket' isStatic='false' isConst='false' >
+</field>
+<interfaceRec name='ISocketServerFactory' fullname='fitnesse.socketservice:ISocketServerFactory' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\socketservice\ISocketServerFactory.as' namespace='fitnesse.socketservice' access='public' baseClasses='Object' isFinal='false' isDynamic='false' >
+</interfaceRec>
+<method name='getSocketServer' fullname='fitnesse.socketservice:ISocketServerFactory/fitnesse.socketservice:ISocketServerFactory:getSocketServer' isStatic='false' isFinal='false' isOverride='false'  param_names='parent;client;logger' param_types='flash.net:ServerSocket;flash.net:Socket;mx.logging:ILogger' param_defaults='undefined;undefined;undefined' result_type='fitnesse.socketservice:ISocketServer'>
+</method>
+<classRec name='AbstractSocketServer' fullname='fitnesse.socketservice:AbstractSocketServer' sourcefile='C:\Documents and Settings\asterkin\My Documents\My Projects\Flex Dev Env\flexslim\flexslim\src\main\flex\fitnesse\socketservice\AbstractSocketServer.as' namespace='fitnesse.socketservice' access='public' baseclass='Object' interfaces='fitnesse.socketservice:ISocketServer' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='AbstractSocketServer' fullname='fitnesse.socketservice:AbstractSocketServer/AbstractSocketServer' isStatic='false' isFinal='false' isOverride='false'  param_names='self;client;logger' param_types='fitnesse.socketservice:AbstractSocketServer;flash.net:Socket;mx.logging:ILogger' param_defaults='undefined;undefined;undefined' result_type='*'>
+</method>
+<method name='close' fullname='fitnesse.socketservice:AbstractSocketServer/close' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='handleIOError' fullname='fitnesse.socketservice:AbstractSocketServer/protected:handleIOError' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='onDataArrived' fullname='fitnesse.socketservice:AbstractSocketServer/private:onDataArrived' isStatic='false' isFinal='false' isOverride='false'  param_names='evt' param_types='flash.events:ProgressEvent' param_defaults='undefined' result_type='void'>
+</method>
+<method name='onIOError' fullname='fitnesse.socketservice:AbstractSocketServer/private:onIOError' isStatic='false' isFinal='false' isOverride='false'  param_names='evt' param_types='flash.events:IOErrorEvent' param_defaults='undefined' result_type='void'>
+</method>
+<method name='readRequest' fullname='fitnesse.socketservice:AbstractSocketServer/protected:readRequest' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='logger' fullname='fitnesse.socketservice:AbstractSocketServer/logger/get' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.logging:ILogger'>
+</method>
+<method name='socket' fullname='fitnesse.socketservice:AbstractSocketServer/socket/get' isStatic='false' isFinal='false' isOverride='false'  result_type='flash.net:Socket'>
+</method>
+<field name='logger_' fullname='fitnesse.socketservice:AbstractSocketServer/private:logger_' type='mx.logging:ILogger' isStatic='false' isConst='false' >
+</field>
+<field name='socket_' fullname='fitnesse.socketservice:AbstractSocketServer/private:socket_' type='flash.net:Socket' isStatic='false' isConst='false' >
+</field>
+</asdoc>
