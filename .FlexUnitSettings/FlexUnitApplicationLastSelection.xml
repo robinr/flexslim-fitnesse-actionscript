@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="" >
+<testsuite  name="Default Test Suite" project="flexslim">
+<testsuite name="fitnesse.slim.service:ListExecutorTest" type="testcaseclass"/>
+<testsuite name="fitnesse.slim.service:ListSerializerTest" type="testcaseclass"/>
+<testsuite name="fitnesse.slim.service:SlimInstructionProcessorTest" type="testcaseclass"/>
+<testsuite name="fitnesse.slim.service:SlimSocketServerFactoryTest" type="testcaseclass"/>
+<testsuite name="fitnesse.slim.service:SlimSocketServerTest" type="testcaseclass"/>
+<testsuite name="fitnesse.slim.service:SlimSocketServiceTest" type="testcaseclass"/>
+<testsuite name="fitnesse.slim.statement:ActionScriptReflectionTest" type="testcaseclass"/>
+<testsuite name="fitnesse.slim.statement:StatementExecutorTest" type="testcaseclass"/>
+<testsuite name="fitnesse.slim.statement:StatementFactoryTest" type="testcaseclass"/>
+<testsuite name="fitnesse.socketservice:AbstractSocketServerTest" type="testcaseclass"/>
+<testsuite name="fitnesse.socketservice:SocketServiceTest" type="testcaseclass"/>
+<testsuite name="util:CommandLineOptionTest" type="testcaseclass"/>
+<testsuite name="util:CommandLineTest" type="testcaseclass"/>
+<testsuite name="util:OptionTokenizerTest" type="testcaseclass"/>
+<testsuite name="util:SprintfTest" type="testcaseclass"/>
+<testsuite name="util:StringTokenizerTest" type="testcaseclass"/>
+</testsuite>
+</testrun>

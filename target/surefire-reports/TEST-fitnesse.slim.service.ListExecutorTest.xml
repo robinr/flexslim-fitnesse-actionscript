@@ -1,0 +1,1 @@
+<testsuite errors='0' failures='0' name='fitnesse.slim.service.ListExecutorTest' tests='2' time='0' ><testcase name="cannotExecuteIfNotArrayOfArrays" time="0"/><testcase name="willExecuteOneStatementAtTheTime" time="0"/></testsuite>

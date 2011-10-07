@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><apiMap><apiItemRef href="util.xml"/><apiItemRef href="fitnesse.slim.xml"><apiItemRef href="fitnesse.slim.service.xml"/><apiItemRef href="fitnesse.slim.statement.xml"/></apiItemRef><apiItemRef href="fitnesse.socketservice.xml"/></apiMap>

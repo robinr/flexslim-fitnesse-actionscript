@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--can't use velocity, got:
+java.io.InvalidClassException: org.apache.velocity.runtime.parser.node.ASTprocess; class invalid for deserialization-->
+<unitestingsupport:TestAirApplication 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	xmlns:unitestingsupport="org.sonatype.flexmojos.unitestingsupport.*"
+	layout="absolute"
+	initialize="init()" 
+	port="1988" 
+	controlPort="1987" 
+	>
+
+
+
+	<mx:Script>
+		<![CDATA[
+
+import fitnesse.slim.service.ListExecutorTest; ListExecutorTest;
+import fitnesse.slim.service.ListSerializerTest; ListSerializerTest;
+import fitnesse.slim.service.SlimInstructionProcessorTest; SlimInstructionProcessorTest;
+import fitnesse.slim.service.SlimSocketServerFactoryTest; SlimSocketServerFactoryTest;
+import fitnesse.slim.service.SlimSocketServerTest; SlimSocketServerTest;
+import fitnesse.slim.service.SlimSocketServiceTest; SlimSocketServiceTest;
+import fitnesse.slim.statement.ActionScriptReflectionTest; ActionScriptReflectionTest;
+import fitnesse.slim.statement.StatementExecutorTest; StatementExecutorTest;
+import fitnesse.slim.statement.StatementFactoryTest; StatementFactoryTest;
+import fitnesse.socketservice.AbstractSocketServerTest; AbstractSocketServerTest;
+import fitnesse.socketservice.SocketServiceTest; SocketServiceTest;
+import util.CommandLineOptionTest; CommandLineOptionTest;
+import util.CommandLineTest; CommandLineTest;
+import util.OptionTokenizerTest; OptionTokenizerTest;
+import util.SprintfTest; SprintfTest;
+import util.StringTokenizerTest; StringTokenizerTest;
+
+
+			private function init():void {
+addTest( ListExecutorTest);
+addTest( ListSerializerTest);
+addTest( SlimInstructionProcessorTest);
+addTest( SlimSocketServerFactoryTest);
+addTest( SlimSocketServerTest);
+addTest( SlimSocketServiceTest);
+addTest( ActionScriptReflectionTest);
+addTest( StatementExecutorTest);
+addTest( StatementFactoryTest);
+addTest( AbstractSocketServerTest);
+addTest( SocketServiceTest);
+addTest( CommandLineOptionTest);
+addTest( CommandLineTest);
+addTest( OptionTokenizerTest);
+addTest( SprintfTest);
+addTest( StringTokenizerTest);
+
+			}
+		]]>
+	</mx:Script>
+
+</unitestingsupport:TestAirApplication>

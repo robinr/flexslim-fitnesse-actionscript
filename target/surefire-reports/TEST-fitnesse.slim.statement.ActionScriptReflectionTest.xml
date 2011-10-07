@@ -1,0 +1,1 @@
+<testsuite errors='0' failures='0' name='fitnesse.slim.statement.ActionScriptReflectionTest' tests='4' time='0' ><testcase name="canCreateInstance" time="0"/><testcase name="willBeAbleToConvertToInt" time="0"/><testcase name="canInspectMethodArguments" time="0"/><testcase name="canCallMethodOnInstance" time="0"/></testsuite>

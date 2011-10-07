@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <swf size="48107" compressedSize="17334">
+
+    <!-- Header data (SWF attributes, product info, markers, etc.) -->
+    <headerData totalSize="407">
+      <data type="metaData" size="288"/>
+      <data type="enableDebugger" size="33"/>
+      <data type="productInfo" size="28"/>
+      <data type="swfHeader" size="21"/>
+      <data type="debugID" size="18"/>
+      <data type="fileAttributes" size="6"/>
+      <data type="scriptLimits" size="6"/>
+      <data type="backgroundColor" size="5"/>
+      <data type="endMarker" size="2"/>
+    </headerData>
+
+    <!-- Cumulative frame size summary. -->
+    <frames totalSize="47700">
+      <frame size="47700" frame="1"/>
+    </frames>
+
+    <!-- Actionscript code and constant data. -->
+    <actionScript totalSize="47601">
+      <abc name="util/sprintf" size="3740" frame="1"/>
+      <abc name="fitnesse/socketservice/SocketService" size="3183" frame="1"/>
+      <abc name="fitnesse/slim/service/ListSerializer" size="2910" frame="1"/>
+      <abc name="fitnesse/socketservice/AbstractSocketServer" size="2213" frame="1"/>
+      <abc name="fitnesse/slim/statement/StatementFactory" size="2077" frame="1"/>
+      <abc name="fitnesse/slim/service/SlimSocketServer" size="2034" frame="1"/>
+      <abc name="util/CommandLine" size="1823" frame="1"/>
+      <abc name="fitnesse/slim/service/SlimSocketService" size="1724" frame="1"/>
+      <abc name="util/CommandLineOption" size="1713" frame="1"/>
+      <abc name="fitnesse/slim/statement/StatementExecutor" size="1463" frame="1"/>
+      <abc name="fitnesse/slim/service/ListExecutor" size="1440" frame="1"/>
+      <abc name="fitnesse/slim/service/SlimInstructionProcessor" size="1395" frame="1"/>
+      <abc name="fitnesse/slim/service/SlimSocketServerFactory" size="1375" frame="1"/>
+      <abc name="util/OptionTokenizer" size="1251" frame="1"/>
+      <abc name="_f17ecb42a63dea584a4616c3eeeaf6d7ee77813d7ed36ab8f3113bbc9c403871_flash_display_Sprite" size="1244" frame="1"/>
+      <abc name="fitnesse/slim/statement/CallAndAssignStatement" size="1155" frame="1"/>
+      <abc name="fitnesse/slim/service/SlimServiceContext" size="1082" frame="1"/>
+      <abc name="fitnesse/slim/statement/MakeStatement" size="1030" frame="1"/>
+      <abc name="util/OptionToken" size="1026" frame="1"/>
+      <abc name="fitnesse/slim/statement/CallStatement" size="1022" frame="1"/>
+      <abc name="util/UnexpectedCommandLineArgumentError" size="985" frame="1"/>
+      <abc name="fitnesse/slim/statement/InvalidStatement" size="984" frame="1"/>
+      <abc name="fitnesse/slim/service/ISlimServiceContext" size="957" frame="1"/>
+      <abc name="fitnesse/slim/statement/ImportStatement" size="926" frame="1"/>
+      <abc name="util/StringTokenizer" size="924" frame="1"/>
+      <abc name="util/MissingCommandLineOptionArgumentError" size="906" frame="1"/>
+      <abc name="fitnesse/socketservice/ISocketServerFactory" size="895" frame="1"/>
+      <abc name="util/UndefinedCommandLineOptionSuppliedError" size="892" frame="1"/>
+      <abc name="fitnesse/slim/statement/SlimError" size="874" frame="1"/>
+      <abc name="util/MissingCommandLineArgumentError" size="832" frame="1"/>
+      <abc name="fitnesse/slim/service/IInstructionProcessor" size="816" frame="1"/>
+      <abc name="fitnesse/slim/statement/IStatement" size="733" frame="1"/>
+      <abc name="fitnesse/socketservice/ISocketServer" size="716" frame="1"/>
+      <abc name="util/CommandLineError" size="639" frame="1"/>
+      <abc name="fitnesse/slim/SlimVersion" size="622" frame="1"/>
+    </actionScript>
+
+    <!-- Additional frame tags (symbolClass, exportAssets, showFrame, etc). -->
+    <frameData totalSize="99">
+      <tag type="symbolClass" size="97" frame="1"/>
+      <tag type="showFrame" size="2" frame="1"/>
+    </frameData>
+  </swf>
+</report>

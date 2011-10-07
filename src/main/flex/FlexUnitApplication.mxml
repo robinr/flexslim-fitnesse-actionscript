@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This is an auto generated file and is not intended for modification. -->
+
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
+					   xmlns:s="library://ns.adobe.com/flex/spark"
+					   xmlns:mx="library://ns.adobe.com/flex/mx"
+					   xmlns:flexui="flexunit.flexui.*"
+					   creationComplete="onCreationComplete()">
+	<fx:Script>
+		<![CDATA[
+			import util.StringTokenizerTest;
+			import util.SprintfTest;
+			import util.OptionTokenizerTest;
+			import util.CommandLineTest;
+			import util.CommandLineOptionTest;
+			import fitnesse.socketservice.SocketServiceTest;
+			import fitnesse.socketservice.AbstractSocketServerTest;
+			import fitnesse.slim.statement.StatementFactoryTest;
+			import fitnesse.slim.statement.StatementExecutorTest;
+			import fitnesse.slim.statement.ActionScriptReflectionTest;
+			import fitnesse.slim.service.SlimSocketServiceTest;
+			import fitnesse.slim.service.SlimSocketServerTest;
+			import fitnesse.slim.service.SlimSocketServerFactoryTest;
+			import fitnesse.slim.service.SlimInstructionProcessorTest;
+			import fitnesse.slim.service.ListSerializerTest;
+			import fitnesse.slim.service.ListExecutorTest;
+			
+			public function currentRunTestSuite():Array
+			{
+				var testsToRun:Array = new Array();
+				testsToRun.push(fitnesse.slim.service.ListExecutorTest);
+				testsToRun.push(fitnesse.slim.service.ListSerializerTest);
+				testsToRun.push(fitnesse.slim.service.SlimInstructionProcessorTest);
+				testsToRun.push(fitnesse.slim.service.SlimSocketServerFactoryTest);
+				testsToRun.push(fitnesse.slim.service.SlimSocketServerTest);
+				testsToRun.push(fitnesse.slim.service.SlimSocketServiceTest);
+				testsToRun.push(fitnesse.slim.statement.ActionScriptReflectionTest);
+				testsToRun.push(fitnesse.slim.statement.StatementExecutorTest);
+				testsToRun.push(fitnesse.slim.statement.StatementFactoryTest);
+				testsToRun.push(fitnesse.socketservice.AbstractSocketServerTest);
+				testsToRun.push(fitnesse.socketservice.SocketServiceTest);
+				testsToRun.push(util.CommandLineOptionTest);
+				testsToRun.push(util.CommandLineTest);
+				testsToRun.push(util.OptionTokenizerTest);
+				testsToRun.push(util.SprintfTest);
+				testsToRun.push(util.StringTokenizerTest);
+				return testsToRun;
+			}
+			
+			
+			private function onCreationComplete():void
+			{
+				testRunner.runWithFlexUnit4Runner(currentRunTestSuite(), "flexslim");
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<flexui:FlexUnitTestRunnerUI id="testRunner">
+	</flexui:FlexUnitTestRunnerUI>
+</s:WindowedApplication>

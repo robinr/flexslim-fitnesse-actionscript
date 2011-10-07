@@ -1,0 +1,1 @@
+<testsuite errors='0' failures='0' name='fitnesse.slim.service.SlimSocketServiceTest' tests='2' time='0' ><testcase name="willStartUsingPortNumberOnly" time="0"/><testcase name="willStartInVerboseMode" time="0"/></testsuite>

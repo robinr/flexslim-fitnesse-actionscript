@@ -1,0 +1,1 @@
+<testsuite errors='0' failures='0' name='util.CommandLineOptionTest' tests='3' time='0' ><testcase name="willComplainAboutMissingOptionArgumentEnd" time="0"/><testcase name="willAcceptCorrectListOfValues" time="0"/><testcase name="willComplainAboutMissingOptionArgumentAnotherOption" time="0"/></testsuite>

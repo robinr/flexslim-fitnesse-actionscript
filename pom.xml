@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!--
+	Put copyrigth notice here
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>fitnesse</groupId>
+  <artifactId>flexslim</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>swc</packaging>
+
+  <name>flexslim</name>
+
+  <build>
+    <sourceDirectory>src/main/flex</sourceDirectory>
+    <testSourceDirectory>src/test/flex</testSourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.sonatype.flexmojos</groupId>
+        <artifactId>flexmojos-maven-plugin</artifactId>
+        <version>4.0-beta-3</version>
+        <extensions>true</extensions>
+        <configuration>
+            <headlessServer>true</headlessServer>
+            <verboseStacktraces>true</verboseStacktraces>
+			<coverage>true</coverage>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>2.1.2</version>
+      </plugin>
+    </plugins>
+  </reporting>
+  
+  <dependencies>
+    <dependency>
+      <groupId>com.adobe.flex.framework</groupId>
+      <artifactId>air-framework</artifactId>
+      <version>4.5.0.17855</version>
+      <type>pom</type>
+	</dependency>
+	
+    <dependency>
+      <groupId>com.adobe.flexunit</groupId>
+      <artifactId>flexunit</artifactId>
+      <version>4.1.0-beta3</version>
+      <type>swc</type>
+      <scope>test</scope>
+    </dependency>
+	
+    <dependency>
+      <groupId>net.sf.asmock</groupId>
+      <artifactId>asmock</artifactId>
+      <version>1.0</version>
+      <type>swc</type>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>net.sf.asmock</groupId>
+      <artifactId>asmock-flexunit4.1</artifactId>
+      <version>1.0</version>
+      <type>swc</type>
+      <scope>test</scope>
+    </dependency>	
+  </dependencies>
+
+</project>
