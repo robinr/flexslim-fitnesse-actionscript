@@ -1,0 +1,15 @@
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {adl "%m" -- -v}
+!define TEST_RUNNER {D:\FlashIntegTest\flexslim\MyName\bin-debug\ChannelBar-app.xml}
+
+|import |
+|fixture|
+
+|import           |
+|com.nds.eventdata|
+
+!|EventFx                                      |
+|Name             |Genre    |Starttime|Duration|test1 ?|
+|ICC Awards       |sports   |3:00     |30      |ICC Awards sports 3:00 30|
+|Man vs Wild      |adventure|4:00     |45      |b|
+|Football worldcup|sports   |5:00     |30      |c|

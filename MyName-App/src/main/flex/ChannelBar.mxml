@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx"
+					   invoke="onAppInvoke(event)">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import com.nds.eventdata.EventList;
+			import com.nds.eventdata.Eventelement;
+			import com.nds.eventdata.Iterator;
+			import fixture.EventFx;
+			
+			import fitnesse.slim.service.SlimSocketService;
+			
+			private function onAppInvoke(event : InvokeEvent) : void 
+			{
+				var c1 : Eventelement = null;
+				var c2 : EventList = null;
+				var c3 : Iterator = null;
+				var c4 : EventFx = null;
+				
+				
+				SlimSocketService.main(event.arguments)
+			}
+		]]>
+	</fx:Script>			
+</s:WindowedApplication>
