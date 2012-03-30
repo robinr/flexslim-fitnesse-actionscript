@@ -36,6 +36,8 @@ robinr.rao@gmail.com
 
 package fitnesse.slim.statement
 {
+	import fitnesse.slim.service.SlimSocketServer;
+	
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
 	import flash.utils.getDefinitionByName;
@@ -119,10 +121,24 @@ package fitnesse.slim.statement
             result = null;
             instance_   = instances[instanceName];
             
+            var filledArgs:Array = [];
+            for each (var arg:Object in args) {
+                var filledArg:Object = arg;
+                
+                // if arg is a variable name, try to fill it
+                var str:String = arg as String;
+                if(str && str.length > 2) {
+                    if("$" == str.charAt(0) && "$" != str.charAt(1)) {
+                        filledArg = SlimSocketServer.variables[str];
+                    }
+                }
+                filledArgs.push(filledArg);
+            }
+            
 			try
 			{
 				const method : Function = instance_[methodName];
-				result = method.apply(instance_, args);
+				result = method.apply(instance_, filledArgs);
 			} catch (e : TypeError) {
                 result = new SlimError(
                     sprintf(
@@ -166,7 +182,9 @@ package fitnesse.slim.statement
       
 		public function callAndAssign(target : String, instance : String, methodName : String, args : Array) : Object
 		{
-			return "OK";
+            var result:Object = call(instance, methodName, args);
+            SlimSocketServer.variables["$" + target] = result;
+			return result;
 		}	
 	}
 }
