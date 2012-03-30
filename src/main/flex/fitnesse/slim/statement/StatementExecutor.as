@@ -36,21 +36,28 @@ robinr.rao@gmail.com
 
 package fitnesse.slim.statement
 {
+	import flash.events.Event;
+	import flash.events.EventDispatcher;
 	import flash.utils.getDefinitionByName;
 	import flash.utils.getQualifiedClassName;
 	
+	import org.spicefactory.lib.reflect.ClassInfo;
+	
 	import util.sprintf;
 	
-	public class StatementExecutor
+    [Event(name="done", type="flash.events.Event")]
+    public class StatementExecutor extends EventDispatcher
 	{
 		private var path_      : Array;
 		private var instances_ : Array;
-		
+		public  var result     : Object;
+        private var instance_  : Object;
+        
 		public function StatementExecutor()
 		{
 			path_      = [""];
 			instances_ = new Array();
-		}
+        }
 		
 		public function get path() : Array
 		{
@@ -70,7 +77,7 @@ package fitnesse.slim.statement
 		
 		public function create(instance : String, className : String, args : Array) : Object
 		{
-			for each(var scope : String in path)
+			for each(var scope : String in path) {
 				try
 				{
 					const clazz : Class = getDefinitionByName(scope + className) as Class;
@@ -82,7 +89,8 @@ package fitnesse.slim.statement
 				} catch (e : SlimError) {
 					return e;
 				}
-				return new SlimError(sprintf("NO_CLASS %s",className));
+            }
+            return new SlimError(sprintf("NO_CLASS %s",className));
 		}
 
 		private static function makeInstance(className : String, clazz : Class, args : Array) : Object
@@ -107,35 +115,58 @@ package fitnesse.slim.statement
 		
 		public function call(instanceName : String, methodName : String, args : Array) : Object
 		{
-			const instance : Object   = instances[instanceName];
-			
+            instance_ = null;
+            result = null;
+            instance_   = instances[instanceName];
+            
 			try
 			{
-				const method : Function = instance[methodName];
-				const result : Object   = method.apply(instance, args);
+				const method : Function = instance_[methodName];
+				result = method.apply(instance_, args);
 			} catch (e : TypeError) {
-				return new SlimError(
-					sprintf(
-						"NO_INSTANCE %s",
-						instanceName
-					)
-				);
+                result = new SlimError(
+                    sprintf(
+                        "NO_INSTANCE %s",
+                        instanceName
+                    )
+                );
+                complete();
+				return result;
 			} catch (e : ReferenceError) {
-				return new SlimError(
-					sprintf(
-						"NO_METHOD_IN_CLASS %s[%d] %s",
-						methodName,
-						args.length,
-						getQualifiedClassName(instance)
-					)
-				);
+                result = new SlimError(
+                    sprintf(
+                        "NO_METHOD_IN_CLASS %s[%d] %s",
+                        methodName,
+                        args.length,
+                        getQualifiedClassName(instance_)
+                    )
+                );
+                complete();
+				return result;
 			}
-			return result;
+
+            var isAsyncMethod:Boolean = ClassInfo.forInstance(instance_).getMethod(methodName).hasMetadata("Async");
+            if(isAsyncMethod) {
+                (instance_ as AsyncFixture).addEventListener("done", doneHandler);
+            }
+            else {
+                complete();
+            }
+            return result;
 		}
-		
+        
+        private function doneHandler(event:Event):void {
+            (instance_ as AsyncFixture).removeEventListener("done", doneHandler);
+            complete();
+        }
+        
+        private function complete():void {
+            dispatchEvent(new Event("done"));
+        }
+      
 		public function callAndAssign(target : String, instance : String, methodName : String, args : Array) : Object
 		{
 			return "OK";
-		}		
+		}	
 	}
 }

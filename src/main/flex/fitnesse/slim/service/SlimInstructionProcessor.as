@@ -33,20 +33,17 @@ For any feedback please send e-mail: raghavendrar@nds.com or
 robinr.rao@gmail.com
 
 */
-
-
 package fitnesse.slim.service
 {
 	import flash.events.Event;
-	import flash.net.ServerSocket;
+	import flash.events.EventDispatcher;
 	
-	import mx.logging.ILogger;
-	
-	public class SlimInstructionProcessor implements IInstructionProcessor
+    [Event(name="done", type="flash.events.Event")]
+    public class SlimInstructionProcessor extends EventDispatcher implements IInstructionProcessor
 	{
 		private var serializer_ : ListSerializer;
 		private var executor_   : ListExecutor;
-		
+        
 		public function SlimInstructionProcessor(serializer : ListSerializer, executor : ListExecutor)
 		{
 			serializer_ = serializer;
@@ -63,12 +60,20 @@ package fitnesse.slim.service
 			return executor_;	
 		}
 				
-		public function processInstructions(input : String) : String
+		public function processInstructions(input : String) : void
 		{
 			const instructions : Array = serializer.deserialize(input);
-			const results      : Array = executor.execute(instructions);
-			
-			return serializer.serialize(results);
+            executor.addEventListener("done", doneHandler);
+			executor.execute(instructions);
 		}
+        
+        private function doneHandler(event:Event):void {
+            executor.removeEventListener("done", doneHandler);
+            dispatchEvent(new Event("done"));
+        }
+        
+        public function retrieveResults() : String {
+            return serializer.serialize(executor.results);
+        }
 	}
 }

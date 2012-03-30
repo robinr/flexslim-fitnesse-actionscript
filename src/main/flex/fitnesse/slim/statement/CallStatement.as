@@ -35,9 +35,13 @@ robinr.rao@gmail.com
 */
 package fitnesse.slim.statement
 {
+    import flash.events.Event;
+    import flash.events.EventDispatcher;
 
-	public class CallStatement implements IStatement
+    [Event(name="done", type="flash.events.Event")]
+    public class CallStatement extends EventDispatcher implements IStatement
 	{
+		private var executor_ : StatementExecutor;
 		private var instance_ : String;
 		private var method_   : String;
 		private var args_     : Array;
@@ -51,7 +55,21 @@ package fitnesse.slim.statement
 		
 		public function execute(executor : StatementExecutor) : Object
 		{
-			return executor.call(instance_, method_, args_);
+            executor_ = executor;
+            executor_.addEventListener("done", doneHandler);
+            
+			return executor_.call(instance_, method_, args_);
 		}
+        
+        public function retrieveResult() : Object 
+        {
+            return executor_.result;
+        }
+        
+        private function doneHandler(event:Event) : void 
+        {
+            executor_.removeEventListener("done", doneHandler);
+            dispatchEvent(new Event("done"));
+        }
 	}
 }
