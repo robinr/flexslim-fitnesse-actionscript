@@ -42,6 +42,7 @@ package fitnesse.slim.service
 	import flash.events.Event;
 	import flash.net.ServerSocket;
 	import flash.net.Socket;
+	import flash.utils.Dictionary;
 	
 	import mx.logging.ILogger;
 	
@@ -53,6 +54,8 @@ package fitnesse.slim.service
 		private var processor_   : IInstructionProcessor;
 		private var length_      : uint;
          
+        public static var variables:Dictionary = new Dictionary();
+        
 		public function SlimSocketServer(parent : ServerSocket, client : Socket, processor : IInstructionProcessor, logger : ILogger)
 		{
 			super(this, client, logger);
