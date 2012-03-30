@@ -38,18 +38,21 @@ package fitnesse.slim.service
 {
 	import fitnesse.slim.SlimVersion;
 	import fitnesse.socketservice.AbstractSocketServer;
+	
 	import flash.events.Event;
 	import flash.net.ServerSocket;
 	import flash.net.Socket;
+	
 	import mx.logging.ILogger;
+	
 	import util.sprintf;
 	
 	public class SlimSocketServer extends AbstractSocketServer
 	{
-		private var parent_    : ServerSocket;
-		private var processor_ : IInstructionProcessor;
-		private var length_    : uint;
-		
+		private var parent_      : ServerSocket;
+		private var processor_   : IInstructionProcessor;
+		private var length_      : uint;
+         
 		public function SlimSocketServer(parent : ServerSocket, client : Socket, processor : IInstructionProcessor, logger : ILogger)
 		{
 			super(this, client, logger);
@@ -77,7 +80,7 @@ package fitnesse.slim.service
 		protected override function processRequest() : void
 		{
 			readLength();
-			if(allBytesArived())
+			if(allBytesArrived())
 				processInstructions(readInstructions());
 		}
 
@@ -91,7 +94,7 @@ package fitnesse.slim.service
 			}			
 		}
 		
-		private function allBytesArived() : Boolean
+		private function allBytesArrived() : Boolean
 		{
 			const available : uint = socket.bytesAvailable;
 			if(length_ <= available) return true;
@@ -111,7 +114,7 @@ package fitnesse.slim.service
 			if("bye" == instructions.toLowerCase())
 				shutDown();
 			else
-				writeResponse(getResults(instructions));			
+				execute(instructions);			
 			length_ = 0;
 		}
 		
@@ -126,13 +129,18 @@ package fitnesse.slim.service
 			socket.flush();
 		}
 		
-		private function getResults(instructions : String) : String
+		private function execute(instructions : String) : void
 		{
-			const results   : String = processor.processInstructions(instructions);
-			const outLength : int    = results.length;
-			
-			logger.debug(sprintf("Results: %s",results));
-			return sprintf(SlimFormat.RESPONSE_FORMAT,outLength,results);
+            processor.addEventListener("done", doneHandler);
+			processor.processInstructions(instructions);
 		}
+        
+        private function doneHandler(event:Event):void {
+            processor.removeEventListener("done", doneHandler);
+            
+            const results:String = processor.retrieveResults();
+            logger.debug(sprintf("Results: %s",results));
+            writeResponse(sprintf(SlimFormat.RESPONSE_FORMAT, results.length, results));
+        }
 	}
 }

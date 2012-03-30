@@ -37,35 +37,71 @@ robinr.rao@gmail.com
 
 package fitnesse.slim.service
 {
+	import fitnesse.slim.statement.CallStatement;
+	import fitnesse.slim.statement.IStatement;
 	import fitnesse.slim.statement.StatementExecutor;
 	import fitnesse.slim.statement.StatementFactory;
+	
+	import flash.events.Event;
+	import flash.events.EventDispatcher;
 
-	public class ListExecutor
+    [Event(name="done", type="flash.events.Event")]
+    public class ListExecutor extends EventDispatcher
 	{
-		private var factory_  : StatementFactory;
-		private var executor_ : StatementExecutor;
-		
+		private var factory_          : StatementFactory;
+		private var executor_         : StatementExecutor;
+        private var instructions_     : Array;
+        public  var results           : Array;
+        private var currentStatement_ : IStatement;
+        private var currentId_        : String;
+        
 		public function ListExecutor(factory : StatementFactory=null, executor : StatementExecutor=null)
 		{
 			factory_  = factory;
 			executor_ = executor;
 		}
 		
-		public function execute(instructions : Array) : Array
+		public function execute(instructions : Array) : void
 		{
-			var results : Array = [];
-			for each(var instruction : Object in instructions)
-				executeInstruction(instruction, results);
-			return results;
+            instructions_ = instructions;
+            results = [];
+            processNextInstruction();
 		}
-		
-		private function executeInstruction(inst : Object, results : Array) : void
+        
+        private function processNextInstruction():void
+        {
+            if(instructions_.length > 0) {
+                var instruction:Object = instructions_.shift();
+                executeInstruction(instruction);    
+            }
+            else {
+                dispatchEvent(new Event("done"));
+            }
+        }
+        
+		private function executeInstruction(inst : Object) : void
 		{
 			if(!(inst is Array))
 				throw new SyntaxError("Instruction must be an Array");
 			var instruction : Array  = inst as Array;
-			const id        : String = instruction.shift();
-			results.push([id,factory_.getStatement(instruction).execute(executor_)]);
+			currentId_ = instruction.shift();
+            currentStatement_ = factory_.getStatement(instruction);
+            if(currentStatement_ is CallStatement) {
+                (currentStatement_ as CallStatement).addEventListener("done", doneHandler);
+                currentStatement_.execute(executor_);
+            }
+            else {
+                var result:Object = currentStatement_.execute(executor_);
+                results.push([currentId_,result]);
+                processNextInstruction();
+            }
 		}
+        
+        private function doneHandler(event:Event):void
+        {
+            (currentStatement_ as CallStatement).removeEventListener("done", doneHandler);
+            results.push([currentId_, (currentStatement_ as CallStatement).retrieveResult()]);
+            processNextInstruction();
+        }
 	}
 }

@@ -53,7 +53,7 @@ package fitnesse.slim.statement
 		
 		public function execute(executor : StatementExecutor) : Object
 		{
-			return executor.callAndAssign(target_, instance_, method_, args_);;
+			return executor.callAndAssign(target_, instance_, method_, args_);
 		}
 	}
 }

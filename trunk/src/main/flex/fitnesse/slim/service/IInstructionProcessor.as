@@ -36,8 +36,11 @@ Copyright (C) 2011
 
 package fitnesse.slim.service
 {
-	public interface IInstructionProcessor
+    import flash.events.IEventDispatcher;
+
+	public interface IInstructionProcessor extends IEventDispatcher
 	{
-		function processInstructions(input : String) : String;		
+		function processInstructions(input : String) : void;
+        function retrieveResults() : String;
 	}
 }
